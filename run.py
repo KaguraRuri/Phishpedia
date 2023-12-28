@@ -12,7 +12,8 @@ os.environ['KMP_DUPLICATE_LIB_OK']='True'
 if __name__ == '__main__':
 
     ELE_MODEL, SIAMESE_THRE, SIAMESE_MODEL, LOGO_FEATS, LOGO_FILES, DOMAIN_MAP_PATH = load_config(None)
-
+    
+    # pull the test datasets from Hugging Face before execution
     dataset = load_dataset("KaguraRuri/Datasets_pedia")
     dataset.save_to_disk("phishpedia/datasets/test_sites")
 

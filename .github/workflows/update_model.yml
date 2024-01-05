@@ -26,7 +26,7 @@ jobs:
 
     - name: Download Model
       run: |
-        mkdir -p phishpedia/models
+        rm -rf phishpedia/models
         git clone --depth 1 --branch main https://huggingface.co/KaguraRuri/Models_pedia.git phishpedia/models
 
     - name: Commit Changes

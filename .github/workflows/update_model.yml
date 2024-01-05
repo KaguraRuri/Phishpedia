@@ -29,7 +29,11 @@ jobs:
     - name: Download Model
       run: |
         rm -rf phishpedia/models
-        git clone --depth 1 --branch main https://huggingface.co/KaguraRuri/Models_pedia phishpedia/models
+        git clone https://huggingface.co/KaguraRuri/Models_pedia phishpedia/models
+        git lfs track "phishpedia/models/detectron2_pedia/rcnn_bet365.pth"
+        git lfs track "phishpedia/models/siamese_pedia/domain_map.pkl"
+        git lfs track "phishpedia/models/siamese_pedia/expand_targetlist.zip"
+        git lfs track "phishpedia/models/siamese_pedia/resnetv2_rgb_new.pth.tar"
 
     - name: Commit Changes
       run: |

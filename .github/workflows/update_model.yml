@@ -23,6 +23,8 @@ jobs:
     - name: Install Dependencies
       run: |
         pip install -q transformers
+        pip install -q git-lfs
+        git lfs install
 
     - name: Download Model
       run: |
